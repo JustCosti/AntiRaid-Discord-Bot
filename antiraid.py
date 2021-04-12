@@ -71,7 +71,7 @@ if "discord.gg" in message.content.strip().lower():
         await bch.send(embed=embed)
         await message.delete()
         bmessage = await message.channel.send(f"{message.author.mention} Sending another link will have you banned!")
-        awaut bmessage.delete(delay=10)
+        await bmessage.delete(delay=10)
     await client.handler.propagate(message)
     await client.process_commands(message)
 
